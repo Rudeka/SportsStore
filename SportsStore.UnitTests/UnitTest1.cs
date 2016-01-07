@@ -180,7 +180,7 @@ namespace SportsStore.UnitTests
         }
 
         [TestMethod]
-        public void CGenerate_Category_Specific_Product_Count()
+        public void Generate_Category_Specific_Product_Count()
         {
             //Arrange
             // - create the mock repository
