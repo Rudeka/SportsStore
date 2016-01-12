@@ -7,9 +7,9 @@ namespace SportsStore.WebUI.Controllers
 {
     public class NavController : Controller
     {
-        private IProductsRepository repository;
+        private IProductRepository repository;
 
-        public NavController(IProductsRepository repo)
+        public NavController(IProductRepository repo)
         {
             repository = repo;
         }

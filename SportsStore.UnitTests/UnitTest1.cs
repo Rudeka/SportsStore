@@ -20,7 +20,7 @@ namespace SportsStore.UnitTests
         public void Can_Paginate()
         {
             //Arrange
-            Mock<IProductsRepository> mock = new Mock<IProductsRepository>();
+            Mock<IProductRepository> mock = new Mock<IProductRepository>();
             mock.Setup(m => m.Products).Returns(new Product[]
             {
                 new Product {ProductID = 1, Name = "P1"},
@@ -74,7 +74,7 @@ namespace SportsStore.UnitTests
         public void Can_Send_Pagination_View_Model()
         {
             //Arrange
-            Mock<IProductsRepository> mock = new Mock<IProductsRepository>();
+            Mock<IProductRepository> mock = new Mock<IProductRepository>();
             mock.Setup(m => m.Products).Returns(new Product[]
             {
                 new Product {ProductID = 1, Name = "P1"},
@@ -104,7 +104,7 @@ namespace SportsStore.UnitTests
         {
             //Arrange
             // - create the mock repository
-            Mock<IProductsRepository> mock = new Mock<IProductsRepository>();
+            Mock<IProductRepository> mock = new Mock<IProductRepository>();
             mock.Setup(m => m.Products).Returns(new Product[]
             {
                 new Product {ProductID = 1, Name = "P1", Category = "Cat1"},
@@ -132,7 +132,7 @@ namespace SportsStore.UnitTests
         {
             //Arrange
             // - create the mock repository
-            Mock<IProductsRepository> mock = new Mock<IProductsRepository>();
+            Mock<IProductRepository> mock = new Mock<IProductRepository>();
             mock.Setup(m => m.Products).Returns(new Product[]
             {
                 new Product {ProductID = 1, Name = "P1", Category = "Apples"},
@@ -159,7 +159,7 @@ namespace SportsStore.UnitTests
         {
             //Arrange
             // - create the mock repository
-            Mock<IProductsRepository> mock = new Mock<IProductsRepository>();
+            Mock<IProductRepository> mock = new Mock<IProductRepository>();
             mock.Setup(m => m.Products).Returns(new Product[]
             {
                 new Product {ProductID = 1, Name = "P1", Category = "Apples"},
@@ -184,7 +184,7 @@ namespace SportsStore.UnitTests
         {
             //Arrange
             // - create the mock repository
-            Mock<IProductsRepository> mock = new Mock<IProductsRepository>();
+            Mock<IProductRepository> mock = new Mock<IProductRepository>();
             mock.Setup(m => m.Products).Returns(new Product[]
             {
                 new Product {ProductID = 1, Name = "P1", Category = "Cat1"},

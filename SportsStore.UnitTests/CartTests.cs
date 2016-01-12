@@ -137,7 +137,7 @@ namespace SportsStore.UnitTests
         public void Can_Add_To_Cart()
         {
             // Arrange - create the mock repository
-            Mock<IProductsRepository> mock = new Mock<IProductsRepository>();
+            Mock<IProductRepository> mock = new Mock<IProductRepository>();
             mock.Setup(m => m.Products).Returns(new Product[]
             {
                 new Product {ProductID = 1, Name = "P1", Category = "Apples"}
@@ -161,7 +161,7 @@ namespace SportsStore.UnitTests
         public void Adding_Product_To_Cart_Goes_ToCart_Screen()
         {
             // Arrange - create the mock repository
-            Mock<IProductsRepository> mock = new Mock<IProductsRepository>();
+            Mock<IProductRepository> mock = new Mock<IProductRepository>();
             mock.Setup(m => m.Products).Returns(new Product[]
             {
                 new Product {ProductID = 1, Name = "P1", Category = "Apples"}

@@ -12,12 +12,12 @@ namespace SportsStore.WebUI.Controllers
 {
     public class ProductController : Controller
     {
-        private IProductsRepository repository;
+        private IProductRepository repository;
         public int PageSize = 4;
 
-        public ProductController(IProductsRepository productsRepository)
+        public ProductController(IProductRepository productRepository)
         {
-            repository = productsRepository;
+            repository = productRepository;
         }
         // GET: Product
         public ViewResult List(string category, int page = 1)
@@ -40,6 +40,19 @@ namespace SportsStore.WebUI.Controllers
                 CurrentCategory = category
             };
             return View(model);
+        }
+
+        public FileContentResult GetImage(int productId)
+        {
+            Product prod = repository.Products.FirstOrDefault(p => p.ProductID == productId);
+            if (prod != null)
+            {
+                return File(prod.ImageData, prod.ImageMimeType);
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace SportsStore.Domain.Concrete
 {
-    public class EFProductRepository : IProductsRepository
+    public class EfProductRepository : IProductRepository
     {
         private EFDbContext context = new EFDbContext();
         public IEnumerable<Product> Products => context.Products;
@@ -23,6 +23,8 @@ namespace SportsStore.Domain.Concrete
                     dbEntry.Description = product.Description;
                     dbEntry.Price = product.Price;
                     dbEntry.Category = product.Category;
+                    dbEntry.ImageData = product.ImageData;
+                    dbEntry.ImageMimeType = product.ImageMimeType;
                 }
             }
             context.SaveChanges();
